@@ -1,0 +1,355 @@
+[gd_scene load_steps=33 format=3 uid="uid://67yeuf6iqdns"]
+
+[ext_resource type="Script" path="res://Plante2.cs" id="1_6bpth"]
+[ext_resource type="Script" path="res://Plante.cs" id="1_up03f"]
+[ext_resource type="Texture2D" uid="uid://c81pxooalrftb" path="res://Plante morte.png" id="2_1sqtj"]
+[ext_resource type="Texture2D" uid="uid://bvoi3uu5dwwn" path="res://Plante2_Plante 1 parasite copie.png" id="2_n50yh"]
+[ext_resource type="Texture2D" uid="uid://dpmn8jrfxg57q" path="res://Plante 1.png" id="3_ai4td"]
+[ext_resource type="Texture2D" uid="uid://p1bos81nmj3d" path="res://Plante2_Plante2 1.png" id="3_op7ka"]
+[ext_resource type="Texture2D" uid="uid://drvruyeqnvs1f" path="res://Plante 2.png" id="4_l7t84"]
+[ext_resource type="Texture2D" uid="uid://b3q3abe2jt5lq" path="res://Plante2_Plante 2 2.png" id="4_wskg4"]
+[ext_resource type="Texture2D" uid="uid://bonp4rofpnwe3" path="res://Plante 3.png" id="5_c8k2k"]
+[ext_resource type="Texture2D" uid="uid://b2s4vff3emwof" path="res://Plante2_Plante 2 3.png" id="5_wem53"]
+[ext_resource type="Texture2D" uid="uid://644855ptwj8d" path="res://Plante 4.png" id="6_f2qls"]
+[ext_resource type="Texture2D" uid="uid://cvurjniax8ffg" path="res://Plante2_Plante 2 1 parasite.png" id="6_rs28e"]
+[ext_resource type="Texture2D" uid="uid://8vllkd5l271b" path="res://Plante2_Plante 2 2 parasite.png" id="7_1kmvl"]
+[ext_resource type="Texture2D" uid="uid://cd3wvj3bu5wwt" path="res://Plante 5.png" id="7_nbcf7"]
+[ext_resource type="Texture2D" uid="uid://7ak58yyvndsn" path="res://Plante2_Plante 2 3 parasite.png" id="8_go3y1"]
+[ext_resource type="Texture2D" uid="uid://ba8tmp3xi3fap" path="res://Plante parasite_Plante 1 parasite.png" id="8_mkuo4"]
+[ext_resource type="Texture2D" uid="uid://dh2vwo3e8f5rv" path="res://Plante parasite_Plante 2 parasite.png" id="9_s50jl"]
+[ext_resource type="Texture2D" uid="uid://uq7tpl1jo4av" path="res://Plante parasite_Plante 3 parasite.png" id="10_sknl1"]
+[ext_resource type="Texture2D" uid="uid://iimaa4bshsgd" path="res://Plante 4 parasite.png" id="11_uvvyx"]
+[ext_resource type="Texture2D" uid="uid://u0xtfiq2w3cj" path="res://Plante 5 parasite.png" id="12_ldfs4"]
+[ext_resource type="Texture2D" uid="uid://dajcunk708kc6" path="res://Arrière Plan_Arrière plan.png" id="13_cqhh8"]
+[ext_resource type="Texture2D" uid="uid://c3p0ccsda62y7" path="res://Fichier 8.png" id="13_xphdl"]
+[ext_resource type="Texture2D" uid="uid://bqhxwqrxgtfr7" path="res://Fichier 9.png" id="14_baonh"]
+[ext_resource type="Texture2D" uid="uid://bspoprroflrl5" path="res://Fichier 10.png" id="15_4q13w"]
+[ext_resource type="Texture2D" uid="uid://bh7xnc3c568a5" path="res://2Fichier 10.png" id="16_oifnt"]
+[ext_resource type="Texture2D" uid="uid://xof7ivrjegcg" path="res://boutons/arroser.png" id="25_5gwpx"]
+[ext_resource type="Texture2D" uid="uid://cl6s3n5mp1qs2" path="res://boutons/deparasiter.png" id="26_jrr5o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_agxr0"]
+size = Vector2(327.186, 900.396)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lv4te"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4nqq1"]
+
+[sub_resource type="Theme" id="Theme_qj886"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibcv3"]
+size = Vector2(151.064, 204.255)
+
+[node name="Sprout" type="Node2D"]
+
+[node name="Plante2" type="Node2D" parent="."]
+script = ExtResource("1_6bpth")
+plant0 = ExtResource("2_n50yh")
+plant1 = ExtResource("3_op7ka")
+plant2 = ExtResource("4_wskg4")
+plant3 = ExtResource("5_wem53")
+plantpara1 = ExtResource("6_rs28e")
+plantpara2 = ExtResource("7_1kmvl")
+plantpara3 = ExtResource("8_go3y1")
+
+[node name="Sprite2D" type="Sprite2D" parent="Plante2"]
+position = Vector2(298, 188)
+scale = Vector2(0.384, 0.384)
+texture = ExtResource("3_op7ka")
+
+[node name="Area2D" type="Area2D" parent="Plante2"]
+position = Vector2(295, 188)
+scale = Vector2(0.394271, 0.394271)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plante2/Area2D"]
+position = Vector2(36.7767, 252.364)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_agxr0")
+
+[node name="UI_Panel" type="Control" parent="Plante2"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -178.0
+offset_top = -49.0
+offset_right = -138.0
+offset_bottom = -9.0
+
+[node name="ButtonArroser" type="Button" parent="Plante2/UI_Panel"]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 78.1704
+offset_right = 487.0
+offset_bottom = 203.17
+pivot_offset = Vector2(110.468, 38.5321)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lv4te")
+icon = ExtResource("25_5gwpx")
+expand_icon = true
+
+[node name="ButtonDeparasiter" type="Button" parent="Plante2/UI_Panel"]
+layout_mode = 0
+offset_left = 478.724
+offset_top = 78.0
+offset_right = 582.724
+offset_bottom = 199.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4nqq1")
+icon = ExtResource("26_jrr5o")
+expand_icon = true
+
+[node name="ButtonFermer" type="Button" parent="Plante2/UI_Panel"]
+layout_mode = 0
+offset_left = 563.0
+offset_top = 87.0
+offset_right = 590.0
+offset_bottom = 118.0
+text = "x"
+
+[node name="ProgressBar" type="Control" parent="Plante2"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -283.0
+offset_top = -40.0
+offset_right = -243.0
+
+[node name="ProgressBarWater" type="TextureProgressBar" parent="Plante2/ProgressBar"]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 533.0
+offset_right = 629.0
+offset_bottom = 546.0
+pivot_offset = Vector2(90, -1)
+theme = SubResource("Theme_qj886")
+max_value = 10.0
+texture_under = ExtResource("13_xphdl")
+texture_progress = ExtResource("14_baonh")
+
+[node name="Label" type="Label" parent="Plante2/ProgressBar/ProgressBarWater"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 12.0
+offset_right = 70.0
+offset_bottom = 35.0
+text = "Eau"
+horizontal_alignment = 1
+
+[node name="ProgressBarHp" type="TextureProgressBar" parent="Plante2/ProgressBar"]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 571.0
+offset_right = 629.0
+offset_bottom = 611.0
+texture_under = ExtResource("13_xphdl")
+texture_progress = ExtResource("15_4q13w")
+
+[node name="Label" type="Label" parent="Plante2/ProgressBar/ProgressBarHp"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 12.0
+offset_right = 71.0
+offset_bottom = 35.0
+text = "Santé
+"
+
+[node name="ProgressBarGrowth" type="TextureProgressBar" parent="Plante2/ProgressBar"]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 607.0
+offset_right = 629.0
+offset_bottom = 647.0
+max_value = 5.0
+step = 0.5
+texture_under = ExtResource("13_xphdl")
+texture_progress = ExtResource("16_oifnt")
+
+[node name="Label" type="Label" parent="Plante2/ProgressBar/ProgressBarGrowth"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 94.0
+offset_bottom = 34.0
+text = "Croissance"
+
+[node name="Timer" type="Timer" parent="Plante2"]
+wait_time = 7.0
+autostart = true
+
+[node name="Plante" type="Node2D" parent="."]
+texture_filter = 1
+position = Vector2(246, -28)
+scale = Vector2(0.94, 0.94)
+script = ExtResource("1_up03f")
+Plante0 = ExtResource("2_1sqtj")
+Plante1 = ExtResource("3_ai4td")
+Plante2 = ExtResource("4_l7t84")
+Plante3 = ExtResource("5_c8k2k")
+Plante4 = ExtResource("6_f2qls")
+Plante5 = ExtResource("7_nbcf7")
+PlantePara1 = ExtResource("8_mkuo4")
+PlantePara2 = ExtResource("9_s50jl")
+PlantePara3 = ExtResource("10_sknl1")
+PlantePara4 = ExtResource("11_uvvyx")
+PlantePara5 = ExtResource("12_ldfs4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Plante"]
+position = Vector2(331.975, 389.362)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("3_ai4td")
+
+[node name="Area2D" type="Area2D" parent="Plante"]
+position = Vector2(234.166, 357)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plante/Area2D"]
+position = Vector2(101, 57.8936)
+shape = SubResource("RectangleShape2D_ibcv3")
+
+[node name="UI_Panel" type="Control" parent="Plante"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -273.404
+offset_top = -444.681
+offset_right = -233.404
+offset_bottom = -404.681
+
+[node name="ButtonArroser" type="Button" parent="Plante/UI_Panel"]
+layout_mode = 0
+offset_left = 506.383
+offset_top = 589.532
+offset_right = 613.383
+offset_bottom = 714.532
+pivot_offset = Vector2(110.468, 38.5321)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lv4te")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lv4te")
+icon = ExtResource("25_5gwpx")
+expand_icon = true
+
+[node name="ButtonDeparasiter" type="Button" parent="Plante/UI_Panel"]
+layout_mode = 0
+offset_left = 605.106
+offset_top = 589.362
+offset_right = 709.106
+offset_bottom = 710.362
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4nqq1")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4nqq1")
+icon = ExtResource("26_jrr5o")
+expand_icon = true
+
+[node name="ButtonFermer" type="Button" parent="Plante/UI_Panel"]
+layout_mode = 0
+offset_left = 697.0
+offset_top = 603.0
+offset_right = 724.0
+offset_bottom = 634.0
+text = "x"
+
+[node name="Timer" type="Timer" parent="Plante"]
+wait_time = 6.0
+autostart = true
+
+[node name="ProgressBar" type="Control" parent="Plante"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -239.362
+offset_top = 24.4681
+offset_right = -199.362
+offset_bottom = 64.4681
+
+[node name="ProgressBarWater" type="TextureProgressBar" parent="Plante/ProgressBar"]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 533.0
+offset_right = 629.0
+offset_bottom = 546.0
+pivot_offset = Vector2(90, -1)
+theme = SubResource("Theme_qj886")
+max_value = 10.0
+texture_under = ExtResource("13_xphdl")
+texture_progress = ExtResource("14_baonh")
+
+[node name="Label" type="Label" parent="Plante/ProgressBar/ProgressBarWater"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 12.0
+offset_right = 70.0
+offset_bottom = 35.0
+text = "Eau"
+horizontal_alignment = 1
+
+[node name="ProgressBarHp" type="TextureProgressBar" parent="Plante/ProgressBar"]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 571.0
+offset_right = 629.0
+offset_bottom = 611.0
+texture_under = ExtResource("13_xphdl")
+texture_progress = ExtResource("15_4q13w")
+
+[node name="Label" type="Label" parent="Plante/ProgressBar/ProgressBarHp"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 12.0
+offset_right = 71.0
+offset_bottom = 35.0
+text = "Santé
+"
+
+[node name="ProgressBarGrowth" type="TextureProgressBar" parent="Plante/ProgressBar"]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 607.0
+offset_right = 629.0
+offset_bottom = 647.0
+max_value = 5.0
+step = 0.5
+texture_under = ExtResource("13_xphdl")
+texture_progress = ExtResource("16_oifnt")
+
+[node name="Label" type="Label" parent="Plante/ProgressBar/ProgressBarGrowth"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 94.0
+offset_bottom = 34.0
+text = "Croissance"
+
+[node name="PlancheTendanceV" type="Sprite2D" parent="."]
+z_index = -6
+position = Vector2(560, 269)
+scale = Vector2(0.335742, 0.297436)
+texture = ExtResource("13_cqhh8")

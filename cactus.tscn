@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://o71vuydl5qhm"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g6k2x"]
+load_path = "res://.godot/imported/CACTUS 1.png-e1677cfe44b21c934a4fce14b8e6300e.ctex"
+
+[node name="Plante" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(590, 230)
+texture = SubResource("CompressedTexture2D_g6k2x")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(586, 286)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
